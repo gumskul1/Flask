@@ -8,7 +8,10 @@
       <div class="contaner">
         <nav>
           <ul class="menu">
-            <li {% if aktiva_lapa == 'home' %} 
+            <li> {% set active_page = "home" %}
+                  class="active"
+            </li>        
+            <li class="active" {% if aktiva_lapa == 'home' %} 
                   class='active'
                 {% endif %}>
              <a href="/home">Home</a></li>
