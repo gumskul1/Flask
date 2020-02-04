@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from file_proc import read_file
 
 app = Flask(__name__)
 
@@ -24,6 +25,15 @@ def params ():
   for key, value in args.items():
     print(f"{key}.{value}")
   return args
+
+@app.route('/post_req', methods = ['POST'])
+def post_req():
+  return request.args
+
+@app.route('/read_file')
+def read_from_file():
+  content = read_file()
+  return content
 
 @app.route('/params_table')
 def params_table ():
