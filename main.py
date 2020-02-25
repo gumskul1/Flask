@@ -62,3 +62,4 @@ if __name__ =='__main__':
 #palaist "serveri"
 #pip install -r .\requirments.txt --user
 #python main.py
+#http://localhost:5125/read_file
